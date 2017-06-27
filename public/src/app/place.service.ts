@@ -41,8 +41,16 @@ export class PlaceService {
     .toPromise();
   }
 
-  findPhoto(photoRef){
-    return this._http.get('https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference='+photoRef+this.API_KEY, this.options)
+  // findPhoto(photoRef){
+  //   return this._http.get('https://maps.googleapis.com/maps/api/place/photo?maxwidth=400&photoreference='+photoRef+this.API_KEY, this.options)
+  //   .map((response)=> {
+  //     return response.json();
+  //   })
+  //   .toPromise();
+  // }
+
+  findPlaceDetails(placeid){
+    return this._http.get('https://maps.googleapis.com/maps/api/place/details/json?placeid='+placeid+this.API_KEY, placeid)
     .map((response)=> {
       return response.json();
     })

@@ -22,9 +22,9 @@ export class PlaceComponent implements OnInit {
     .then((data)=>{
       console.log(data);
       this.places=data;
-      this._placeService.findPhoto(this.places.results[0].photos[0].photo_reference)
-      .then((data)=>{this.photos=data;})
-      .catch((error)=>{console.log(error);});
+      // this._placeService.findPhoto(this.places.results[0].photos[0].photo_reference)
+      // .then((data)=>{this.photos=data;})
+      // .catch((error)=>{console.log(error);});
     })
     .catch((error)=>{console.log(error);})
   }

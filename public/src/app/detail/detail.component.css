@@ -1,0 +1,16 @@
+img {
+  height: 300px;
+  width: auto;
+  object-fit: fill;
+  position: relative;
+  //left: 30%;
+}
+
+.carousel {
+  background-color: grey;
+}
+
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+}
