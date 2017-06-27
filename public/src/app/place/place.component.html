@@ -1,0 +1,15 @@
+<fieldset class="well">
+  <legend>Search Place</legend>
+  <form (submit)="findPlace()">
+    <input type="text" name="place" [(ngModel)]="place">
+    <input type="submit" value="submit">
+  </form>
+</fieldset>
+
+<div class="col-md-12" *ngFor="let place of places.results">
+  <div class="col-md-4 well">
+    <a href="">{{place.name}}</a>
+    <!-- <p>{{place.photos[0].photo_reference}}</p> -->
+    <img class="img-fluid rounded"src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=200&photoreference={{place.photos[0].photo_reference}}&key=AIzaSyCWxzap9mC-3SFSRdKyaWuMVtOCaoGSj04">
+  </div>
+</div>
